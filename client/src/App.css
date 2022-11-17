@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
+*{
+  font-family: Inter !important;
+}
+
 :root{
   --background-white: #FEFEFE;
   --background-blue: #5F9FFF;
@@ -23,5 +27,96 @@
 
 
 body{
+  margin: 0;
+  padding: 0;
   background: var(--background-white);
+}
+
+nav{
+  display: flex;
+  position: absolute;
+
+  flex-direction: column;
+  
+  width: 375px;
+  height: 100vh;
+
+  top: 0;
+  left: 0;
+
+  background: var(--background-blue);
+}
+
+.groupManagment{
+  display: flex;
+
+  align-content: center;
+  justify-content: center;
+
+  width: 375px;
+  height: 45px;
+  background: var(--background-white);
+  
+  
+}
+
+.groupManagment > span > p{
+  font-size: 13px;
+}
+
+.subjectChoise{
+  display: block;
+  position: relative;
+
+  top: 15px;
+}
+
+.subjectChoise > ul{
+  display: flex;
+  list-style-type: none;
+
+  margin: 0;
+  padding: 0;
+
+  align-content: center;
+  justify-content: center;
+  
+}
+
+.subjectChoise > ul > li.first, li.second, li.third{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 104px;
+  height: 55px;
+
+  background: var(--background-light-white);
+}
+
+.subjectChoise > ul > li.first{
+  border-radius: 15px 0 0 15px;
+}
+
+.subjectChoise > ul > li.second{
+ border-left: 2px solid var(--text-light-white);
+ border-right: 2px solid var(--text-light-white);
+}
+
+.subjectChoise > ul > li.third{
+  border-radius: 0 15px 15px 0;
+}
+
+
+
+.subjectChoise > ul > li > button{
+  border: none;
+  outline: none;
+  background: none;
+  text-decoration: none;
+
+  color: var(--text-white);
+
+  font-size: 20px;
+  font-weight: lighter;
 }
