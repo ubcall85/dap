@@ -18,9 +18,7 @@ const Groups = () => {
             xhr.open( 'GET', url, true );
             
             
-        } );
-
-        
+        });
     }
 
     (async () => {

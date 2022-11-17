@@ -12,9 +12,16 @@ const start = async () => {
         app.listen(PORT, () => {
             console.log("Server started on port ", PORT)
         });
+
+        app.get('/api/getMembers', (res, req)=>{
+            res.json('/dataBase/members.json')
+        });
     } catch (e) {
         
     }
 }
 
 start();
+
+
+
