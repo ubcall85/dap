@@ -18,6 +18,7 @@ const Groups = () => {
     return (
         <div className={"groupList"}>
             {members.map( el => <div><span>{el.group_name}</span><span>▼</span></div> )}
+            {/* {members.map(el => <span>{el.group_members[].name}</span>)} */}
         </div>
     );
 }
