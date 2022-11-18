@@ -1,4 +1,5 @@
 import React from "react";
+import Groups from "./Groups";
 import { BsArrowBarDown } from 'react-icons/bs';
 
 
@@ -15,16 +16,17 @@ const Navigation = () => {
             </div>
             <div className="subjectChoise">
                 <ul>
-                    <li className={"first"}>
-                        <button><span>ОПД</span></button>
+                    <li>
+                        <button className={"first"}>ОПД</button>
                     </li>
-                    <li className={"second"}>
-                        <button>ЭО</button>
+                    <li>
+                        <button className={"second"}>ЭО</button>
                     </li>
-                    <li className={"third"}>
-                        <button>Менедж.</button>
+                    <li>
+                        <button className={"third"}>Менедж.</button>
                     </li>
                 </ul>
+                <Groups></Groups>
             </div>
         </nav>
     );

@@ -55,9 +55,9 @@ nav{
 
   width: 375px;
   height: 45px;
+
+  color: var(--text-blue);
   background: var(--background-white);
-  
-  
 }
 
 .groupManagment > span > p{
@@ -83,7 +83,7 @@ nav{
   
 }
 
-.subjectChoise > ul > li.first, li.second, li.third{
+.subjectChoise > ul > li > button.first, .subjectChoise > ul > li > button.second, .subjectChoise > ul > li > button.third{
   display: flex;
   align-items: center;
   justify-content: center;
@@ -94,20 +94,18 @@ nav{
   background: var(--background-light-white);
 }
 
-.subjectChoise > ul > li.first{
+.subjectChoise > ul > li > button.first{
   border-radius: 15px 0 0 15px;
 }
 
-.subjectChoise > ul > li.second{
+.subjectChoise > ul > li > button.second{
  border-left: 2px solid var(--text-light-white);
  border-right: 2px solid var(--text-light-white);
 }
 
-.subjectChoise > ul > li.third{
+.subjectChoise > ul > li > button.third{
   border-radius: 0 15px 15px 0;
 }
-
-
 
 .subjectChoise > ul > li > button{
   border: none;
@@ -119,4 +117,39 @@ nav{
 
   font-size: 20px;
   font-weight: lighter;
+}
+
+.subjectChoise > ul > li > button:hover{
+  background: var(--background-gray);
+}
+
+.groupList{
+  display: flex;
+  position: relative;
+
+  flex-direction: column;
+
+  top: 35px;
+}
+
+.groupList > div{
+  display: flex;
+  border: none;
+
+  height: 33px;
+
+  margin-top: 5px;
+  padding-left: 15px;
+  padding-right: 15px;
+
+  align-items: center;
+  justify-content: space-between;
+
+  color: var(--text-white);
+  background: var(--background-gray);
+}
+
+.groupList > button > span {
+  font-size: 20px;
+  font-weight: 500;
 }

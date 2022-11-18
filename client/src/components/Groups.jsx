@@ -1,33 +1,23 @@
 import React from "react";
+import {BsArrowDown} from "react-icons/bs";
 
-const Groups = async () => {
+const Groups = () => {
 
-    const { XMLHttpRequest } = require( 'xmlhttprequest' );
+    const members = [
+        {
+           "group_name": "ИСПВ-1",
+           "group_members": [{"name": "Срыль Шудья", "token": "000000"}]
+        },
+        {
+            "group_name": "Ъ-666",
+            "group_members": [{"name": "Дрестелев Иван", "token": "00000"}]
+         } 
+    ];
 
-    async function request (){
-        return new Promise( function( resolve, reject ) {
 
-            let xhr = new XMLHttpRequest();
-            xhr.onreadystatechange = function() {
-                if ( this.readyState == 4 ) {
-                    if ( this.status == 200 ) resolve( this.responseText ); 
-                    else reject( this.status );
-                }
-            }
-    
-            xhr.open( 'GET', url, true );
-            
-            
-        });
-    }
-
-    const json_raw = await request ('https://localhost:5000/dataBase/members.json');
-    const json = JSON.parse(json_raw);
-
-    
     return (
-        <div>
-            {json.map( el => <span> ${el.group_name} </span> )}
+        <div className={"groupList"}>
+            {members.map( el => <div><span>{el.group_name}</span><span>▼</span></div> )}
         </div>
     );
 }
