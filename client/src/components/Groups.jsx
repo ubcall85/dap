@@ -1,6 +1,6 @@
 import React from "react";
 
-const Groups = () => {
+const Groups = async () => {
 
     const { XMLHttpRequest } = require( 'xmlhttprequest' );
 
@@ -21,13 +21,14 @@ const Groups = () => {
         });
     }
 
-    (async () => {
-        const request = await request ('https://localhost:5000/dataBase/members.json');
-    })();
+    const json_raw = await request ('https://localhost:5000/dataBase/members.json');
+    const json = JSON.parse(json_raw);
 
     
     return (
-        <div></div>
+        <div>
+            {json.map( el => <span> ${el.group_name} </span> )}
+        </div>
     );
 }
 
